@@ -129,7 +129,7 @@ Constructors are used.
 Functional/Stateless Components
 Just a JavaScript function and has props as an argument.
 Doesn't require render().
-They have nothing to do with state.
+They only accept data.
 React lifecycle methods can't be used.
 Hooks are easily used.
 Constructors aren't used.
