@@ -14,7 +14,7 @@ _Sprint challenges open at Midnight PST on Thursday and close at 5pm PST on Frid
 
 ## Introduction
 
-In this challenge, you will add class components to your a basic ecommerce site that allow you to request product data from a server and render that data. You will also implement the ablitity to add products to a shopping cart.
+In this challenge, you will add class components to your basic ecommerce site that allow you to request product data from a server and render that data. You will also implement the ability to add products to a shopping cart.
 
 In meeting the minimum viable product (MVP) specifications listed below, your project should look like the solution examples below:
 
@@ -27,7 +27,7 @@ You will also need to build the two tests in the `CheckoutForm.test.js` file and
 ## Project Setup
 * [ ] Run npm install to install your dependencies.
 * [ ] Run npm start to run your frontend and backend code automatically.
-* [ ] Note your backend code will run automatically when your run npm start. There is no need to seperately run a server.js file and no means to test the server through postman or the browser. Feel free to ignore any messages related to MSW or mock service workers.
+* [ ] Note your backend code will run automatically when your run npm start. There is no need to separately run a server.js file and no means to test the server through postman or the browser. Feel free to ignore any messages related to MSW or mock service workers.
 
 ## Project Instructions
 
@@ -60,7 +60,7 @@ In this project, you will build the retrieve data from a public api, add in a fa
 
 ### Project Requirements
 
- Your finished project must include all of the following requirements.
+ Your finished project must include all the following requirements.
 
 #### Plant list
 
@@ -80,7 +80,7 @@ In this project, you will build the retrieve data from a public api, add in a fa
 
 * [ ] Build a custom hook called `useForm`, and use it in your CheckoutForm component to control the form's stateful logic. **You do not need to use useLocalStorage to complete this task! localStorage is not necessary for this project. Simply reproduce all functionality for the useForm custom hook to complete.**
 
-* [ ] Try and build it out first before you peek at the guided project. And *do not* copy/paste directly from the guided project!_
+* [ ] Try to build it out first before you peek at the guided project. And *do not* copy/paste directly from the guided project!_
 
 ### Testing the Checkout Form
 * [ ] Run the test runner and ensure that `src/components/CheckoutForm.test.js` is correctly called.
@@ -118,8 +118,49 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. What are the main differences between a stateful and a functional component?
 
+Stateful Components
+Extends React.Component.
+Requires render().
+They use logic and state.
+React lifecycle methods can be used.
+Different syntax to use hooks.
+Constructors are used.
+
+Functional/Stateless Components
+Just a JavaScript function and has props as an argument.
+Doesn't require render().
+They have nothing to do with state.
+React lifecycle methods can't be used.
+Hooks are easily used.
+Constructors aren't used.
+
 2. When does a componentWillMount function be called? What about a componentWillUpdate?
+
+componentWillMount
+It is called before the render method is carried out.
+
+componentWillUpdate
+It is called before the component renders.
+
 
 3. Define stateful logic.
 
+Logic that is built into a component. 
+It can be anything from a click event to a toggle state, etc.
+
 4. What are the three step of creating a successful test? What is done in each phase? 
+Arrange
+   "The render method renders a React element into a virtual DOM" (lambdaschool.instructure.com).
+   
+Act
+Use screen.getByText() to look for a specific text. 
+You can also use getByLabelId() to look for a label id. 
+You can use different screen than I've listed here but here is the gist of it.
+
+Assert
+Make sure that something has been rendered. 
+Use expect().toBeInTheDocument() to see if it is in the document.
+Use expect().toBeTruthy() to see if it is true or false.
+Use expect().not.toBeFalsy() to see if it is not false.
+Use expect().toBeFalsy() to see if it is false.
+You can use different expect() than I've listed here but here is the gist of it.
